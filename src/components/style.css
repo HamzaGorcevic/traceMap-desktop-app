@@ -1,0 +1,247 @@
+.container {
+    min-height: 100vh;
+    background-color: #607d8b;
+    padding-top: 10vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+.containerMapSidebar {
+    display: flex;
+    width: 92%;
+    margin-top: 50px;
+    margin-bottom: 150px;
+    height: 750px;
+    align-items: center;
+    justify-content: center;
+}
+
+.infoContainer {
+    color: #001f3f;
+    width: 80%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    font-size: xx-large;
+}
+.infoContainer p {
+    font-weight: normal;
+}
+.searchContainer {
+    display: flex;
+    align-items: center;
+    width: 500px;
+    padding: 10px;
+}
+
+/* Style for the search input */
+.searchContainer input[type="text"] {
+    padding: 10px;
+    border: 2px solid #607d8b; /* Cosmic Dust Gray */
+    border-radius: 5px;
+    font-size: 16px;
+    width: 100%;
+}
+
+/* Style for the search button */
+.searchContainer button,
+.clearMap {
+    padding: 15px 20px;
+    background-color: #001f3f; /* Deep Space Blue */
+    color: #ffd700; /* Celestial Gold */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    text-wrap: nowrap;
+    z-index: 20;
+}
+.clearMap {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    z-index: 10;
+    z-index: 20;
+}
+
+/* Hover effect for the button */
+.searchContainer button:hover {
+    background-color: #004080; /* Darker shade of Deep Space Blue */
+}
+.mapContainer {
+    position: relative;
+    width: 76%;
+    height: 100%;
+}
+
+.frame{
+
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 25px;
+    z-index: 15;
+    display: flex;
+    align-items: center;
+    background-color: #607d8b;
+
+    justify-content: center;
+}
+.frame2{
+    height: 100%;
+    left: 0;
+    width: 20px;
+}
+.frame3{
+    height: 100%;
+    width: 20px;
+    left: calc(100% - 20px);
+
+}
+.frame4{
+    height: 20px;
+    width: 100%;
+    top: 0;
+    
+}
+
+.loader {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #05162877;
+}
+.custom-popup {
+    background-color: white;
+    color: black;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    max-width: 300px;
+}
+
+.custom-popup p {
+    margin: 5px 0;
+}
+
+.custom-popup p:first-child {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.custom-popup p:not(:first-child) {
+    color: #666;
+    font-size: 12px;
+}
+
+@media screen and (max-width: 640px) {
+    .containerMapSidebar {
+        flex-direction: column;
+        height: 1000px;
+        gap: 20px;
+        width: 100%;
+    }
+    .infoContainer {
+        width: 96%;
+    }
+    .infoContainer p {
+        font-size: 20px;
+    }
+    .infoContainer h2 {
+        font-size: 30px;
+        margin-bottom: 0;
+    }
+    .mapContainer {
+        width: 90%;
+        margin-bottom: 10px;
+    }
+    .searchContainer {
+        width: 90%;
+    }
+    .searchContainer button {
+        overflow: hidden;
+        width: 35%;
+    }
+    .searchContainer input[type="text"] {
+        padding: 10px;
+        border: 2px solid #607d8b; /* Cosmic Dust Gray */
+        border-radius: 5px;
+        font-size: 16px;
+        width: 60%;
+    }
+}
+
+
+.sidebar {
+    width: 20%; /* Adjust width as needed */
+    height: 100%; /* Adjust height as needed */
+    background-color: #001f3f;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding-left: 10px;
+    padding-right: 10px;
+    color: #ffd700;
+    border-radius: 0px 10px 10px 0;
+}
+
+.logo img {
+    width: 100px; /* Adjust logo width as needed */
+    margin-bottom: 20px;
+}
+
+.hop {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    padding: 10px;
+    border-bottom: 1px solid #fff2af; /* Add a border between hops */
+}
+
+.hop-number {
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.hop-info {
+    flex-grow: 1; /* Grow to fill available space */
+}
+
+.country {
+    font-weight: bold;
+}
+
+.lat-long {
+    font-style: italic;
+}
+/* 
+@media screen and (max-width: 1100px) {
+    .sidebar {
+        width: 209px;
+    }
+} */
+@media screen and (max-width: 640px) {
+    .sidebar {
+        margin-top: 30px;
+        width: 83% !important;
+        position: relative;
+        width: 90%;
+        border-radius: 20px;
+        right: 0;
+        top: 0;
+        left: 0;
+        bottom: 0;
+    }
+}
